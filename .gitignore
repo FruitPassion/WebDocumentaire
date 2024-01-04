@@ -1,6 +1,6 @@
 .idea
 __pycache__
-/paquets/data
+.vscode
 .venv
 .env
 env
