@@ -1,0 +1,33 @@
+<div id="_papier_3" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+        <div>
+            <h1 class="titre">Objets</h1>
+        </div>
+        <div>
+            <model-viewer class="viewer-3D" src="{{ url_for('static',filename='content/viewer/model/papier.glb') }}"
+                          camera-controls
+                          poster="poster.webp"
+                          shadow-intensity="1">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+        </div>
+        <div>
+            <p>"Les objets présents dans les backrooms sont des objets anormaux que l'on peut trouver et transporter
+                hors des niveaux. Ils diffèrent en termes d'utilité, de danger, de rareté et d'anomalies, car la
+                plupart d'entre eux ont une utilité, tout comme les entités. Il est important de noter que chaque
+                niveau possède son propre ensemble d'objets, souvent liés au thème spécifique du niveau. Certaines
+                propriétés des objets peuvent être documentées et reproduites, permettant ainsi la fabrication d'objets,
+                comme c'est le cas avec l'Eau d'Amande produite par Eau d'Amande Inc™, qui trouve son origine dans un
+                objet ordinaire couramment trouvé dans les backrooms, conçu pour vous aider dans votre aventure. <br>
+                L'origine des articles et des objets présents dans les backrooms reste inconnue, mais on suppose que
+                les objets qui se sont retrouvés dans les backrooms ont été influencés par les propriétés des tunnels
+                de no-clip, enregistrés par les backrooms et recréés dans cet environnement chaotique en constante
+                expansion. Une autre hypothèse suggère qu'ils ont été créés en même temps que les backrooms par une
+                entité puissante capable de voyager dans le temps, étant donné que la plupart des objets ressemblent
+                à ceux du 21ème siècle, comme les bouteilles de Douleur Liquide, par exemple. Personne ne sait
+                vraiment ce qu'il en est."</p>
+        </div>
+    </div>
+</div>

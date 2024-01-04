@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/musique.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/viewer.css') }}">
+{% endblock %}
+
+
+{% block javascriptsup %}
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+{% endblock %}
+
+
+{% block body %}
+    <div>
+        <div>
+            <p id="text-salle">Salle {{ salle_num }} : <a id="text-notification">...</a></p>
+        </div>
+        {% if salle_num == '1' %}
+            {% include "modulaire/_papier_1.html" %}
+            {% include "modulaire/_reddit.html" %}
+            {% include "modulaire/_logo-br.html" %}
+            {% include "modulaire/_youtube.html" %}
+        {% elif salle_num == '2' %}
+            {% include "modulaire/_papier_2.html" %}
+            {% include "modulaire/_journal.html" %}
+            {% include "modulaire/_camescope.html" %}
+            {% include "modulaire/_cassette.html" %}
+        {% elif salle_num == '3' %}
+            {% include "modulaire/_papier_3.html" %}
+            {% include "modulaire/_ordinateur.html" %}
+            {% include "modulaire/_amande.html" %}
+            {% include "modulaire/_ouija.html" %}
+            {% include "modulaire/_machine.html" %}
+        {% elif salle_num == '4' %}
+            {% include "modulaire/_papier_4.html" %}
+            {% include "modulaire/_wallworms.html" %}
+            {% include "modulaire/_window.html" %}
+            {% include "modulaire/_clumps.html" %}
+            {% include "modulaire/_hound.html" %}
+            {% include "modulaire/_skinstealer.html" %}
+        {% endif %}
+    </div>
+    <audio id="track" autoplay loop>
+        <p>If you are reading this, it is because your browser does not support the audio element.</p>
+        <source src="{{ url_for('static',filename='music/ambiance.mp3') }}" type="audio/mp3"/>
+    </audio>
+
+    <div id="player-container" class="hidden">
+        <div id="play-pause" class="play">Play</div>
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    <script type="text/javascript" src="https://pchen66.github.io/js/three/three.min.js"></script>
+    <script type="text/javascript" src="https://pchen66.github.io/js/panolens/panolens.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    {% if salle_num == '2' %}
+        <script type="text/javascript" src="https://unpkg.com/wavesurfer.js"></script>
+    {% endif %}
+    <script type="text/javascript">
+        let audio_voix = '{{ url_for("static",filename="music/cassette.wav") }}';
+        {% if salle_num == '1' %}
+            let salle_extension = '{{ salle_extension }}';
+            let href_salle2 = '{{ url_for("next_room", next_room_num=2, deverouillage=1) }}';
+            let href_salle3 = '{{ url_for("next_room", next_room_num=3, deverouillage=1) }}';
+            let href_salle4 = '{{ url_for("next_room", next_room_num=4, deverouillage=1) }}';
+        {% elif salle_num == '4' %}
+            let href_salle1_Oui = '{{ url_for("next_room", next_room_num=1, deverouillage=1) }}';
+            let href_salle1_Non = '{{ url_for("next_room", next_room_num=1, deverouillage=0) }}';
+            let href_salle5 = '{{ url_for('credit') }}';
+            let salle_extension = '{{ salle_extension }}';
+        {% else %}
+            let href_salle1_Oui = '{{ url_for("next_room", next_room_num=1, deverouillage=1) }}';
+            let href_salle1_Non = '{{ url_for("next_room", next_room_num=1, deverouillage=0) }}';
+        {% endif %}
+    </script>
+
+    <script type="text/javascript" src="{{ url_for('static',filename='js/salles/salle'+salle_num+'.js' ) }}"></script>
+{% endblock %}

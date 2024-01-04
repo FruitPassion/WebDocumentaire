@@ -1,0 +1,38 @@
+<div id="_journal" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+        <div>
+            <h1 class="titre">Extraits d'un journal retrouvé</h1>
+        </div>
+        <div>
+            <model-viewer class="viewer-3D" src="{{ url_for('static',filename='content/viewer/model/journal.glb') }}"
+                          camera-controls
+                          poster="poster.webp"
+                          shadow-intensity="1">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+        </div>
+        <div>
+            <p>Je suis arrivé ici il y a quelque temps et j'ai rencontré des survivants qui m'ont expliqué le
+                fonctionnement de cet endroit. J'ai décidé de prendre des notes pour informer les prochaines personnes
+                qui arriveront ici. Cet endroit est le point d'entrée des Backrooms, communément appelé le niveau 0.
+                Bien que l'environnement puisse être angoissant, ce niveau n'est pas très dangereux, du moins selon
+                les autres personnes rencontrées. Si l'on évite les créatures qui y résident, l'atmosphère peut être
+                assez paisible, mais les ressources sont limitées. Je devrais essayer de passer à un autre niveau et
+                je vais chercher des informations auprès du prochain groupe que je rencontrerai.<br>...<br>
+                J'ai rencontré de nouveaux survivants qui m'ont parlé d'un niveau, le niveau 3. Il est assez dangereux
+                car il abrite de nombreuses créatures et des communautés qui ne sont pas forcément amicales.
+                Cependant, il regorge de ressources, ce qui attire souvent des expéditions qui ne reviennent pas
+                souvent. Cela pourrait être un bon endroit pour trouver des ressources, mais il serait préférable
+                de ne pas s'y attarder trop longtemps.<br>...<br>
+                J'ai recroisé le groupe de la dernière fois, et ils ont accepté de répondre à mes questions. Grâce à
+                eux, je sais maintenant qu'en cas d'impossibilité de sortir d'ici, j'ai deux choix pour vivre
+                paisiblement : le niveau 10 ou le niveau 11. Le niveau 10 est réputé pour être très sécurisé,
+                sans groupe ni entité. Cependant, le seul inconvénient est le manque de ressources, et je devrais
+                y vivre seul. Quant au niveau 11, il est également très sécurisé, mais il offre beaucoup de ressources.
+                Le problème est que cela attire de nombreux groupes, ce qui peut parfois créer des tensions.<br>...<br>
+            </p>
+        </div>
+    </div>
+</div>

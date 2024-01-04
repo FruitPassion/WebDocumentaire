@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/login.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div id="bg"></div>
+    <div id="logo-vide">
+        <img src='/static/content/login/logo-login.png' alt='logo-intro' id="logo-dans">
+    </div>
+    <form action="{{ url_for('login') }}" method="post">
+        <div class="form-field texte">
+            <h3>Entrez un nom d'utilisateur et un mot de passe de votre choix.</h3>
+        </div>
+        <div class="form-field">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Pseudo" required>
+        </div>
+
+        <div class="form-field">
+            <input type="password" class="form-control" id="password" name="password" placeholder="Mot de Passe"
+                   required>
+        </div>
+
+        <div class="form-field">
+            <button class="btn" type="submit">S'enregistrer</button>
+        </div>
+    </form>
+
+{% endblock %}

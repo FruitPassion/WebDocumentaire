@@ -1,0 +1,33 @@
+<div id="_amande" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+        <div>
+            <h1 class="titre">Eau d'Amande</h1>
+        </div>
+        <div>
+            <model-viewer class="viewer-3D" src="{{ url_for('static',filename='content/viewer/model/amande.glb') }}"
+                          camera-controls
+                          poster="poster.webp"
+                          shadow-intensity="1">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+        </div>
+        <div>
+            <p>"Note à moi-même :<br>
+                L'eau d'amande est considérée sans danger pour l'homme, à moins d'avoir des preuves contraires. C'est
+                la seule source liquide potable que j'ai pu trouver ici, et elle est très abondante à plusieurs
+                étages.<br>
+                D'après mes expérimentations, trois bouteilles d'eau d'amande contiennent suffisamment de calories et de
+                nutriments pour une journée entière. C'est tellement utile que cela est devenu une monnaie d'échange
+                très courante.
+                <br>En fonction de la couleur de la bouteille, l'eau peut avoir différents effets. Voici une courte
+                liste :
+                <br>- Gris : contient plus de nutriments.
+                <br>- Vert : apporte étrangement plus d'énergie.
+                <br>- Rouge : soulage les petites douleurs telles que les migraines et les maux de gorge.
+                <br>ATTENTION ! Les couleurs mentionnées ci-dessus ont des effets positifs sur le corps. Toute autre
+                couleur devrait être évitée en raison de leurs effets indésirables, voire mortels pour l'homme."</p>
+        </div>
+    </div>
+</div>

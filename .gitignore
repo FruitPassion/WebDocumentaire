@@ -1,0 +1,7 @@
+.idea
+__pycache__
+/paquets/data
+.venv
+.env
+env
+venv

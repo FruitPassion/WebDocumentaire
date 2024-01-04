@@ -1,0 +1,32 @@
+<div id="_ouija" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+        <div>
+            <h1 class="titre">Planche de Ouija</h1>
+        </div>
+        <div >
+            <model-viewer class="viewer-3D" src="{{ url_for('static',filename='content/viewer/model/ouija.glb') }}" camera-controls
+                      poster="poster.webp"
+                      shadow-intensity="1">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+        </div>
+        <div>
+            <p>"Note à moi-même :<br>
+                La planche de Ouija a été trouvée par le groupe M.E.G. Ce groupe a décidé de mener une expérience. Ils
+                ont utilisé la planche de Ouija pour communiquer avec les morts et ont pris des notes sur chaque
+                conversation afin de voir si cela pouvait aider lors d'un deuil.<br>
+                Tout s'est bien passé au début, mais certaines personnes ont affirmé ne pas reconnaître les morts avec
+                qui elles parlaient. Puis un jour, les membres de M.E.G. ont arrêté l'expérience sans explication. Des
+                rumeurs ont commencé à circuler, affirmant qu'il s'était passé quelque chose de terrible.<br>
+                Apparemment, le participant qui avait communiqué avec sa sœur décédée a mystérieusement disparu, ainsi
+                que la planche de Ouija. Le soir même, des témoins ont raconté avoir entendu un cri inhumain dans la
+                forêt, suivi d'un bruit lourd et effrayant en continu. Les gens affirment qu'une horrible bête a été
+                aperçue dans les environs, dépassant même la taille des arbres, mais personne ne sait réellement ce
+                qui s'est passé.<br>
+                Je me demande ce que la sœur décédée a dit au participant pour le pousser à agir ainsi, ce qui leur
+                est arrivé. Je me demande si cette expérience a eu des conséquences sur le monde."</p>
+        </div>
+    </div>
+</div>

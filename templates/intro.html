@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/intro.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/musique.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ url_for('static',filename='js/musique.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static',filename='js/intro.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+    <video id="background-video" autoplay loop >
+        <source src="{{ url_for('static',filename='content/intro/vhs_bg.mp4') }}" type="video/mp4">
+    </video>
+
+    <div id="center">
+        <div id="up-content"></div>
+        <div id="blink">
+            <img src="{{ url_for('static',filename='content/intro/casque.png') }}" id="casque" alt="logo_casque">
+            <p>UNE ECOUTE AVEC UN CASQUE AUDIO EST CONSEILLÉE EN PLUS DE LA MISE EN PLEIN ECRAN DU SITE (Fn11)</p>
+            <p>IL EST AUSSI RECOMMANDÉ D'ACTIVER LA LECTURE AUTOMATIQUE DE L'AUDIO ET DE LA VIDÉO (<a href="https://support.zoomforth.com/en/articles/5941839-enable-video-aut
+            oplay-in-chrome-and-firefox" target="_blank" rel="noopener noreferrer">VOIR COMMENT FAIRE</a>).</p>
+            <button onclick="next()">Continuer</button>
+        </div>
+    </div>
+
+    <audio id="track">
+        <p>If you are reading this, it is because your browser does not support the audio element.</p>
+        <source src="{{ url_for('static',filename='music/fond_intro.mp3') }}" type="audio/mp3"/>
+    </audio>
+
+    <div id="player-container" class="hidden">
+        <div id="play-pause" class="play">Play</div>
+    </div>
+{% endblock %}

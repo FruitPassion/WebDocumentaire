@@ -1,0 +1,28 @@
+<div id="_window" class="modalDialog">
+    <div><a href="#close" title="Close" class="close">X</a>
+        <div>
+            <h1 class="titre">Entité : Window</h1>
+        </div>
+        <div>
+            <model-viewer class="viewer-3D" src="{{ url_for('static',filename='content/viewer/model/window.glb') }}"
+                          camera-controls
+                          poster="poster.webp"
+                          shadow-intensity="1">
+                <div class="progress-bar hide" slot="progress-bar">
+                    <div class="update-bar"></div>
+                </div>
+            </model-viewer>
+        </div>
+        <div>
+            <p>Les Windows sont des entités ressemblant à des fenêtres, dotées d'une silhouette sombre pointant vers
+                leur cible. Elles attaquent instantanément ceux qui ne sont pas conscients de leur présence. On les
+                trouve principalement aux niveaux 1 et 2 des Backrooms. Certaines Windows sont sans danger si aucune
+                silhouette n'est présente, mais d'autres peuvent causer la destruction de ceux qui s'en approchent.
+                Elles attirent les explorateurs en pointant et en murmurant, les capturant et les tirant à l'intérieur
+                même si la fenêtre est fermée. On dit que derrière se trouve un vide sans fin, bien que parfois le
+                paysage soit visible à travers la fenêtre. Les Windows et les Silhouettes peuvent prendre diverses
+                formes et tailles, mais les Silhouettes Sombres ont toujours une apparence humaine et chuchotent des
+                invitations trompeuses.</p>
+        </div>
+    </div>
+</div>

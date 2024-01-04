@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ url_for('static',filename='js/musique.js') }}"></script>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/musique.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/credits.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+{% endblock %}
+
+{% block body %}
+    <div class="bout">
+        <a href="{{ url_for('reset') }}">
+            <span class="glyphicon glyphicon-repeat actions floating" data-toggle="tooltip" title="Revenir à zero"></span>
+        </a>
+    </div>
+    <div class='wrapper'>
+        <div class='movie'>
+            Merci de votre participation
+        </div>
+        <div class='job'>
+            ETUDIANTS EN CHARGE DU PROJET
+        </div>
+        <div class='name'>
+            BOUDIN Raphael<br>
+            LFARH Mouataz<br>
+            ABDESSELAM Charif<br>
+            NANAHA Hamza<br>
+            LONGUET Cédric<br>
+        </div>
+        <div class='job'>
+            RECHERCHES
+        </div>
+        <div class='name'>
+            LFARH Mouataz<br>
+            ABDESSELAM Charif<br>
+            NANAHA Hamza<br>
+            LONGUET Cédric<br>
+        </div>
+        <div class='job'>
+            CODE
+        </div>
+        <div class='name'>
+            BOUDIN Raphael
+        </div>
+        <div class='job'>
+            MAQUETTAGE ET RENDUS 3D
+        </div>
+        <div class='name'>
+            BOUDIN Raphael
+        </div>
+        <div class='job'>
+            CORRECTION ET RELECTURE
+        </div>
+        <div class='name'>
+            ABDESSELAM Charif<br>
+        </div>
+        <div class='job'>
+            REDACTION DES TEXTES
+        </div>
+        <div class='name'>
+            LONGUET Cédric<br>
+            NANAHA Hamza<br>
+            LFARH Mouataz<br>
+        </div>
+        <div class='job'>
+            PROFESSEURS
+        </div>
+        <div class='name'>
+            Mme. RASPAUD Pascale<br>
+            Mme. TINE Chantal<br>
+        </div>
+        <div class='job'>
+            VIDEO D'INTRODUCTION
+        </div>
+        <div class='name'>
+            Malfunction Monday - most brutal crashes/Red Bull rampage edition<br>
+            KanePixel - The Backrooms (Found Footage)<br>
+            Matt Studio - Poolrooms / Don't Get Lost (Exploration Footage #2)
+        </div>
+        <div class='job'>
+            AUDIO CASETTE
+        </div>
+        <div class='name'>
+            Feldup - EXPLORATION des BACKROOMS, un LABYRINTHE sur internet - Findings N°80
+        </div>
+        <div class='job'>
+            MUSIQUE
+        </div>
+        <div class='name'>
+            øneheart - Watching the stars<br>
+        </div>
+        <div class='job'>
+            MODELS 3D
+        </div>
+        <div class='name'>
+            Skecthfab<br>
+            TurboSquid
+        </div>
+    </div>
+
+    <audio id="track" autoplay>
+        <p>If you are reading this, it is because your browser does not support the audio element.</p>
+        <source src="{{ url_for('static',filename='music/watching_star.mp3') }}" type="audio/mp3"/>
+    </audio>
+
+    <div id="player-container" class="hidden">
+        <div id="play-pause" class="play">Play</div>
+    </div>
+{% endblock %}

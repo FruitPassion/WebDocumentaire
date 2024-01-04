@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ titre }}{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/video.css') }}">
+{% endblock %}
+
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ url_for('static',filename='js/video.js') }}"></script>
+{% endblock %}
+
+
+{% block body %}
+    <div id="center">
+        <video id="video_moto" autoplay="autoplay" controls="controls" preload="preload">
+            <source src="{{ url_for('static', filename='content/video/fall.webm') }}" type="video/webm"></source>
+        </video>
+    </div>
+    <p id="statusText"></p>
+{% endblock %}

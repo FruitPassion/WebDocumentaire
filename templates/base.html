@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}BackRooms{% endblock %}</title>
+        <link rel="icon" type="image/png" href="{{  url_for('static',filename='content/logo-backrooms.webp') }}" />
+
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% block javascriptsup %}{% endblock %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
